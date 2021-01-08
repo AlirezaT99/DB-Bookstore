@@ -1,0 +1,43 @@
+<div class="panel-wrapper">
+  <h2>امکانات ناشر</h2>
+  <hr>
+  <h4>افزودن محصول</h4>
+  <label>
+    <input type="email" class="form-control input-num" [(ngModel)]="publisherName" placeholder="نام ناشر">
+  </label>
+  <label>
+    <input type="email" class="form-control input-num" [(ngModel)]="productName" placeholder="نام محصول">
+  </label>
+  <label>
+    <input type="text" class="form-control input-num" [(ngModel)]="productType" placeholder="نوع">
+  </label>
+  <label>
+    <input type="text" class="form-control input-num" [(ngModel)]="productSubject" placeholder="موضوع">
+  </label>
+  <label>
+    <input type="text" class="form-control input-num" [(ngModel)]="productPrice" placeholder="قیمت">
+  </label><br>
+  <button class="btn btn-warning" (click)="createProduct()">افزودن</button>
+  <hr>
+  <h4>لیست محصولات</h4>
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+    <tr>
+      <th>شناسه</th>
+      <th>نام</th>
+      <th>ناشر</th>
+      <th>قیمت</th>
+      <th>زمان انتشار</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.publisher}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.publish_date}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

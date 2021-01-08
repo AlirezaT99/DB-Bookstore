@@ -1,0 +1,53 @@
+<div class="panel-wrapper">
+  <h2>امکانات مدیر</h2>
+  <hr>
+  <h4>لیست کاربران</h4>
+  <button class="btn btn-danger" (click)="removeUser(userToRemove)">حذف کاربر</button>
+  <label>
+    <input type="email" class="form-control input-num" [(ngModel)]="userToRemove" placeholder="شماره کاربر">
+  </label><br>
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+    <tr>
+      <th>نام</th>
+      <th>شماره تلفن</th>
+      <th>ایمیل</th>
+      <th>موجودی</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users;">
+      <td>{{user.name}}</td>
+      <td>{{user.phone_number}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.balance}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h4>لیست نظرات</h4>
+  <button class="btn btn-danger" (click)="removeComment(commentToRemove)">حذف نظر</button>
+  <label>
+    <input type="text" class="form-control input-num" [(ngModel)]="commentToRemove" placeholder="شناسه نظر">
+  </label>
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+    <tr>
+      <th>شناسه</th>
+      <th>شماره کاربر</th>
+      <th>نظر</th>
+      <th>ناشر</th>
+      <th>محصول</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let comment of comments">
+      <td>{{comment.id}}</td>
+      <td>{{comment.phone_number}}</td>
+      <td>{{comment.comment}}</td>
+      <td>{{comment.publisher}}</td>
+      <td>{{comment.product}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

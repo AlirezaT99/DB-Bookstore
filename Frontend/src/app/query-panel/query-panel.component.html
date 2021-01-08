@@ -1,0 +1,14 @@
+<div class="panel-wrapper">
+  <h2>امکانات کاربر</h2>
+  <hr>
+  <label>
+    <textarea dir="ltr" rows="4" cols="100" style="padding: 15px" class="input-num" [(ngModel)]="queryText" placeholder="Write your query..."></textarea>
+  </label>
+  <br>
+  <button class="btn btn-info" (click)="searchQuery()">
+    ثبت پرسمان
+  </button>
+  <br>
+  <hr>
+  <div id="searchResults"></div>
+</div>

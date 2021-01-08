@@ -1,0 +1,9 @@
+.panel-wrapper {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.input-num {
+  border-radius: 15px;
+  margin-right: 10px;
+}
