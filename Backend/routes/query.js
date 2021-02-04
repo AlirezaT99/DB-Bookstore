@@ -5,7 +5,7 @@ const router = new Router()
 
 router.post('/', async (req, res) => {
     let {queryText} = req.body;
-    if (queryText.includes('drop')) {
+    if (queryText.includes('drop') || queryText.includes('union') || queryText.includes('--') || queryText.includes(';')) {
         return res.sendStatus(401)
     }
     const {fields, rows} = await db.query(queryText)
